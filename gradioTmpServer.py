@@ -82,7 +82,7 @@ def TTSapi():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)       
+    app.run(host="160.251.179.81",port = "8090")       
 
 
 
