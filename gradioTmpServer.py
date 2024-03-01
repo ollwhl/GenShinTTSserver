@@ -45,13 +45,13 @@ def SendGradioRequest(speaker,text,speed):
 
     # 检查响应状态码
     if response.status_code == 200:
-        print("请求成功！")
+        print("爬虫请求成功！")
         print(response.text)
         data = json.loads(response.text)
         return data["data"][1]["name"]
         
     else:
-        print(f"请求失败，状态码：{response.status_code}")
+        print(f"爬虫请求失败，状态码：{response.status_code}")
         print(response)
     return response.status_code
 def GetGradioAudio(path):
@@ -62,10 +62,10 @@ def GetGradioAudio(path):
     }
     response = requests.get(url) 
     if response.status_code == 200:
-        print("请求成功！")
+        print("获取文件请求成功！")
         return response.content
     else:
-        print(f"请求失败，状态码：{response.status_code}")
+        print(f"获取文件请求失败，状态码：{response.status_code}")
         return response.content
 
 @app.route('/TTSapi', methods=['GET'])
