@@ -72,7 +72,7 @@ def GetGradioAudio(path):
 def TTSapi():
     speaker = request.args.get('speaker',"派蒙_ZH")
     text = request.args.get('text',"你的请求中没有文本参数")
-    speed = request.args.get('speed',1)
+    speed = request.args.get('speed',0.1)
     volume =request.args.get("volume",1)
 
     path = SendGradioRequest(speaker,text,speed)
